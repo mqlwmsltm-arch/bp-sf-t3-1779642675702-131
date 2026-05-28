@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>정보 - 마포 서버 웜업 PBN 빌더</title>
+    <meta name="description" content="진짜 정보는 여기. 서버 웜업의 비밀, PBN 구조, 마포 지역 최적화. 핑계 대지 말고 속도를 직시하라. 도발적 웜업 가이드.">
+    <meta name="keywords" content="PBN 빌더, 서버 웜업, 정보, 마포, 웜업 가이드, 서버 속도, 캐시 최적화, PBN 구조, 지역 서버">
+    <link rel="canonical" href="https://sf-t3-1779642675702-131.pages.dev/">
+    <meta property="og:title" content="정보 - 마포 서버 웜업 PBN 빌더">
+    <meta property="og:description" content="서버 웜업에 대한 모든 진실. PBN 빌더가 어떻게 마포에서 속도를 지배하는지 낱낱이 파헤친다. 느린 서버는 이제 변명일 뿐.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-131.pages.dev/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="정보 - 마포 서버 웜업 PBN 빌더">
+    <meta name="twitter:description" content="웜업의 모든 것. 속도에 대한 타협은 없다.">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+            background: #0b0d0e;
+            color: #e8e6e3;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 0 1rem;
+        }
+        /* ---------- TYPOGRAPHY ---------- */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f7d44a 0%, #f25c54 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #f7d44a;
+            margin-bottom: 1.5rem;
+            border-left: 6px solid #f25c54;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #e8e6e3;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #c0bcb4;
+            margin-bottom: 1.2rem;
+        }
+        a {
+            color: #f7d44a;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #f25c54;
+        }
+        /* ---------- BRUTALIST ELEMENTS ---------- */
+        .brutal-border {
+            border: 3px solid #2a2d2f;
+            background: #131517;
+            padding: 2rem;
+            box-shadow: 6px 6px 0 #1f2123;
+        }
+        .brutal-border-accent {
+            border: 3px solid #f7d44a;
+            background: #1a1c1e;
+            padding: 2rem;
+            box-shadow: 6px 6px 0 #f25c54;
+        }
+        .accent-bg {
+            background: linear-gradient(180deg, #f7d44a 0%, #f25c54 100%);
+            color: #0b0d0e;
+            font-weight: 800;
+        }
+        .skew-left {
+            transform: skewX(-4deg);
+            display: inline-block;
+        }
+        /* ---------- LAYOUT ---------- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        /* ---------- NAV ---------- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 2px solid #2a2d2f;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            color: #f7d44a;
+        }
+        .logo span {
+            color: #f25c54;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #c0bcb4;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.25rem;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f7d44a;
+            border-bottom-color: #f7d44a;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger-menu span {
+            width: 28px;
+            height: 3px;
+            background: #f7d44a;
+            border-radius: 2px;
+        }
+        .tel-link {
+            background: #f25c54;
+            color: #0b0d0e;
+            padding: 0.5rem 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            border: 2px solid #f7d44a;
+            box-shadow: 3px 3px 0 #f7d44a;
+            transition: 0.15s;
+        }
+        .tel-link:hover {
+            background: #f7d44a;
+            border-color: #f25c54;
+            box-shadow: 3px 3px 0 #f25c54;
+        }
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #f25c54;
+            color: #0b0d0e;
+            padding: 1rem 2.5rem;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 2px solid #f7d44a;
+            box-shadow: 5px 5px 0 #f7d44a;
+            transition: 0.15s;
+        }
+        .cta-button:hover {
+            background: #f7d44a;
+            border-color: #f25c54;
+            box-shadow: 5px 5px 0 #f25c54;
+        }
+        /* ---------- SECTIONS ---------- */
+        .section {
+            padding: 3rem 0;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+        .card {
+            padding: 2rem;
+            background: #131517;
+            border: 2px solid #2a2d2f;
+            box-shadow: 5px 5px 0 #1f2123;
+        }
+        .card h3 {
+            color: #f7d44a;
+            margin-bottom: 0.5rem;
+        }
+        .card .price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #f25c54;
+            margin: 0.5rem 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid #2a2d2f;
+            padding: 1.5rem 0;
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #f7d44a;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.6rem;
+            color: #f25c54;
+        }
+        .faq-answer {
+            margin-top: 1rem;
+            color: #c0bcb4;
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        /* ---------- FOOTER ---------- */
+        footer {
+            border-top: 2px solid #2a2d2f;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            color: #5e6266;
+            font-size: 0.9rem;
+        }
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                padding: 1.5rem 0;
+                background: #131517;
+                border: 2px solid #2a2d2f;
+                margin-top: 1rem;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 0 0.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .tel-link {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- navigation identical to previous page -->
+        <nav>
+            <div class="logo">PBN<span>WARM</span></div>
+            <div class="hamburger-menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/info.html" class="active">정보</a></li>
+                <li><a href="/pricing.html">요금</a></li>
+                <li><a href="/contact.html">문의</a></li>
+                <li><a href="tel:+821012345678" class="tel-link">02-1234-5678</a></li>
+            </ul>
+        </nav>
+
+        <!-- hero -->
+        <section class="hero">
+            <h1>서버 웜업,<br>더는 <span class="skew-left" style="color:#f25c54;">핑계</span> 대지 마라</h1>
+            <p>마포에서 PBN을 굴리는 너, 캐시가 느리다고? 네트워크가 문제라고?<br>우리 도구 앞에서는 모든 변명이 무의미하다. 진짜 속도를 원한다면 이 정보를 읽어라.</p>
+            <a href="#faq" class="cta-button">진실 확인하기</a>
+        </section>
+
+        <!-- why section -->
+        <section class="section">
+            <h2>왜 <span style="color:#f25c54;">PBN 빌더</span>인가</h2>
+            <div class="grid-2">
+                <div class="card brutal-border">
+                    <h3>지역 최적화</h3>
+                    <p>마포 서버는 독특한 트래픽 패턴을 가진다. 우리는 이 동네 네트워크를 해부해서 웜업 스크립트에 반영했다. 지연 시간 40% 단축은 기본.</p>
+                </div>
+                <div class="card brutal-border-accent">
+                    <h3>PBN 구조 이해</h3>
+                    <p>네트워크가 병목인지, 캐시 정책이 문제인지 우리가 진단한다. PBN 빌더는 단순 웜업을 넘어 네트워크 전체를 재설계한다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- detailed info section -->
+        <section class="section">
+            <h2>서버 웜업의 <span style="color:#f25c54;">비밀</span></h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>1. 캐시 프라이밍</h3>
+                    <p>모든 페이지를 한 번에 웜업
+</body>
+</html>
