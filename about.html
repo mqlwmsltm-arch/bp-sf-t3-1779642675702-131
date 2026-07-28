@@ -310,52 +310,92 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- navigation identical to previous page -->
-        <nav>
-            <div class="logo">PBN<span>WARM</span></div>
-            <div class="hamburger-menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">홈</a></li>
-                <li><a href="/info.html" class="active">정보</a></li>
-                <li><a href="/pricing.html">요금</a></li>
-                <li><a href="/contact.html">문의</a></li>
-                <li><a href="tel:+821012345678" class="tel-link">02-1234-5678</a></li>
-            </ul>
-        </nav>
 
-        <!-- hero -->
-        <section class="hero">
-            <h1>서버 웜업,<br>더는 <span class="skew-left" style="color:#f25c54;">핑계</span> 대지 마라</h1>
-            <p>마포에서 PBN을 굴리는 너, 캐시가 느리다고? 네트워크가 문제라고?<br>우리 도구 앞에서는 모든 변명이 무의미하다. 진짜 속도를 원한다면 이 정보를 읽어라.</p>
-            <a href="#faq" class="cta-button">진실 확인하기</a>
-        </section>
+<main>
+<header>
+<div class="container">
+<a href="index.html" class="logo">마포 PBN 빌더</a>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">홈</a></li>
+<li><a href="about.html" class="active">정보</a></li>
+</ul>
+</nav>
+<a class="tel-link" href="tel:+821012345678">+821012345678</a>
+<button class="hamburger-menu" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+</div>
+</header>
+<section class="hero accent-bg skew-left">
+<div class="container">
+<h1>PBN 빌더란 무엇인가</h1>
+<p>PBN(Private Blog Network) 빌더는 여러 개의 위성 사이트를 구축하고 관리해 특정 도메인으로 연결되는 링크 구조를 설계하는 작업을 가리킨다. 이 페이지는 구성 방식과 확인이 필요한 항목을 정리한 정보 페이지다.</p>
+<p>도메인 하나하나의 이력을 살피고 콘텐츠 주제를 분리하는 과정이 반복되기 때문에, 진행 전 전체 구조를 이해해두면 결과물을 검토하기가 수월하다.</p>
+</div>
+</section>
+<section class="container section">
+<h2>구성 요소</h2>
+<div class="grid-2">
+<div class="card brutal-border">
+<h3>도메인 확보</h3>
+<p>만료 도메인이나 신규 도메인을 목적에 맞게 선별해 확보한다.</p>
+</div>
+<div class="card brutal-border">
+<h3>호스팅 분산</h3>
+<p>동일 IP·네임서버 사용을 피해 네트워크 전체의 연관성을 낮춘다.</p>
+</div>
+<div class="card brutal-border">
+<h3>콘텐츠 제작</h3>
+<p>각 사이트가 독립된 주제를 유지하도록 콘텐츠를 구성한다.</p>
+</div>
+<div class="card brutal-border-accent">
+<h3>링크 배치</h3>
+<p>목표 도메인으로 연결되는 링크의 위치와 빈도를 계획한다.</p>
+</div>
+</div>
+</section>
+<section class="container section">
+<h2>이용 시 참고사항</h2>
+<div class="grid-3">
+<div class="card brutal-border"><p>사이트마다 다른 템플릿과 어조를 사용해 연관성을 낮춘다.</p></div>
+<div class="card brutal-border"><p>등록 정보와 접속 이력이 겹치지 않도록 분리해 관리한다.</p></div>
+<div class="card brutal-border-accent"><p>정기적으로 색인 여부와 도메인 만료일을 점검한다.</p></div>
+</div>
+</section>
+<section class="container section">
+<h2>비용 산정 기준</h2>
+<div class="price">
+<p>비용은 구축할 사이트 수, 도메인 확보 난이도, 콘텐츠 제작 분량, 유지 관리 기간에 따라 달라진다. 동일한 사이트 수라도 도메인 히스토리 검증에 들이는 작업량에 따라 편차가 생길 수 있다.</p>
+</div>
+</section>
+<section class="container">
+<h2>용어 정리</h2>
+<div class="grid-2">
+<div class="card"><p><strong>위성 사이트</strong> — 목표 도메인을 지원하기 위해 별도로 운영하는 사이트</p></div>
+<div class="card"><p><strong>도메인 히스토리</strong> — 해당 도메인이 과거에 어떤 용도로 쓰였는지에 대한 기록</p></div>
+</div>
+</section>
+<section class="container">
+<h2>자주 묻는 질문</h2>
+<div class="faq-item open">
+<p class="faq-question">Q. PBN은 일반 백링크와 무엇이 다른가요?</p>
+<p class="faq-answer">A. 링크가 배치되는 사이트 전체를 직접 관리한다는 점에서 콘텐츠와 배치 시점을 더 세밀하게 조정할 수 있다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 사이트 수는 많을수록 좋은가요?</p>
+<p class="faq-answer">A. 수량보다 도메인의 독립성과 콘텐츠 품질이 우선적으로 검토되는 항목이다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 유지 관리는 어떻게 이루어지나요?</p>
+<p class="faq-answer">A. 도메인 갱신, 호스팅 점검, 콘텐츠 업데이트를 주기적으로 진행하는 방식이 일반적이다.</p>
+</div>
+<div class="faq-item">
+<p class="faq-question">Q. 기존에 운영하던 사이트도 포함할 수 있나요?</p>
+<p class="faq-answer">A. 이력과 상태를 점검한 뒤 네트워크 구성에 맞는지 판단해 포함 여부를 정한다.</p>
+</div>
+<a class="cta-button" href="tel:+821012345678">전화 문의</a>
+</section>
+</main>
 
-        <!-- why section -->
-        <section class="section">
-            <h2>왜 <span style="color:#f25c54;">PBN 빌더</span>인가</h2>
-            <div class="grid-2">
-                <div class="card brutal-border">
-                    <h3>지역 최적화</h3>
-                    <p>마포 서버는 독특한 트래픽 패턴을 가진다. 우리는 이 동네 네트워크를 해부해서 웜업 스크립트에 반영했다. 지연 시간 40% 단축은 기본.</p>
-                </div>
-                <div class="card brutal-border-accent">
-                    <h3>PBN 구조 이해</h3>
-                    <p>네트워크가 병목인지, 캐시 정책이 문제인지 우리가 진단한다. PBN 빌더는 단순 웜업을 넘어 네트워크 전체를 재설계한다.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- detailed info section -->
-        <section class="section">
-            <h2>서버 웜업의 <span style="color:#f25c54;">비밀</span></h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>1. 캐시 프라이밍</h3>
-                    <p>모든 페이지를 한 번에 웜업
 </body>
 </html>
